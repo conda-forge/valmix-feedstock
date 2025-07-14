@@ -1,5 +1,5 @@
 {% set name = "valmix" %}
-{% set version = "0.0.1" %}
+{% set version = "1.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/valmix-{{ version }}.tar.gz
-  sha256: 2b7dc93e70ab7287526e9b8853571e92cc7a7315106a4caef34a28bd39e74e1c
+  sha256: 48f992e92b61b4adab1460397ff45cb8e6770578683741e0d14cc61f881213e1
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
